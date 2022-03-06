@@ -1,0 +1,361 @@
+Last login: Tue Feb 22 23:11:44 on ttys000
+Hamzas-MacBook-Pro:~ hamzaalfadel$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout    Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+Hamzas-MacBook-Pro:~ hamzaalfadel$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+Hamzas-MacBook-Pro:~ hamzaalfadel$ 
+Hamzas-MacBook-Pro:~ hamzaalfadel$ git init
+Initialized empty Git repository in /Users/hamzaalfadel/.git/
+Hamzas-MacBook-Pro:~ hamzaalfadel$ cd /Users/hamzaalfadel/Desktop/Python2022/GitHubDemo/learning-github
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git init
+Initialized empty Git repository in /Users/hamzaalfadel/Desktop/Python2022/GitHubDemo/learning-github/.git/
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git init
+Reinitialized existing Git repository in /Users/hamzaalfadel/Desktop/Python2022/GitHubDemo/learning-github/.git/
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git add .
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git add .
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ gHHHHaHHHaHHHaHHHHHHaHaHamHaHHamHHHHHHamzas-MacBook-Pro:learning-github hamzaalfadel$ git commit -m "First Commit"
+[master (root-commit) 5796856] First Commit
+ 6 files changed, 299 insertions(+)
+ create mode 100755 LICENSE
+ create mode 100755 README.md
+ create mode 100755 columns.html
+ create mode 100755 index.html
+ create mode 100755 media.html
+ create mode 100644 test.py
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git log
+commit 57968562f210229277e0708f0bfa99d73d8a8286 (HEAD -> master)
+Author: zeazy <alfadelhamza@gmail.com>
+Date:   Sat Mar 5 22:32:32 2022 +0000
+
+    First Commit
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git status
+On branch master
+nothing to commit, working tree clean
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git status
+On branch master
+nothing to commit, working tree clean
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   test.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git add . 
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   test.py
+
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git restore --staged test.py
+git: 'restore' is not a git command. See 'git --help'.
+
+The most similar command is
+	remote
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout    Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   test.py
+
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git reset HEAD test.py
+Unstaged changes after reset:
+M	test.py
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   test.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git clear
+git: 'clear' is not a git command. See 'git --help'.
+
+The most similar command is
+	clean
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git clean
+fatal: clean.requireForce defaults to true and neither -i, -n, nor -f given; refusing to clean
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout    Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ clear
+
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   test.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git commit -m "commiting change"
+On branch master
+Changes not staged for commit:
+	modified:   test.py
+
+no changes added to commit
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git add .
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git commit -m 'commiting change'
+[master 87e4cad] commiting change
+ 1 file changed, 1 insertion(+)
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git status
+On branch master
+nothing to commit, working tree clean
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git mv test.py newname.py
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	renamed:    test.py -> newname.py
+
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git commit -m "changing name of test.py to newname.py"
+[master 13cd3c1] changing name of test.py to newname.py
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename test.py => newname.py (100%)
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    newname.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git reset .
+Unstaged changes after reset:
+D	newname.py
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    newname.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git reset HEAD newname.py
+Unstaged changes after reset:
+D	newname.py
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git add .
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git checkout HEAD newname.py
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git status
+On branch master
+nothing to commit, working tree clean
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git log --oneline
+13cd3c1 (HEAD -> master) changing name of test.py to newname.py
+87e4cad commiting change
+5796856 First Commit
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git status
+On branch master
+nothing to commit, working tree clean
+Hamzas-MacBook-Pro:learning-github hamzaalfadel$ git rebase -i --root
+hint: Waiting for your editor to close the file... 
+pick 5796856 First Commit
+s 87e4cad commiting change
+pick 13cd3c1 changing name of test.py to newname.py
+
+# Rebase 13cd3c1 onto 3dac26e (3 commands)
+#
+# Commands:
+#  p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup <commit> = like "squash", but discard this commit's log message
+# x, exec <command> = run command (the rest of the line) using shell
+# b, break = stop here (continue rebase later with 'git rebase --continue')
+# d, drop <commit> = remove commit
+# l, label <label> = label current HEAD with a name
+# t, reset <label> = reset HEAD to a label
+# m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]
+# .       create a merge commit using the original merge commit's
+# .       message (or the oneline, if no original merge commit was
+# .       specified). Use -c <commit> to reword the commit message.
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+~                                                                                     
+~                                                                                     
+~                                                                                     
+~                                                                                     
+~                                                                                     
+~                                                                                     
+-- INSERT --
